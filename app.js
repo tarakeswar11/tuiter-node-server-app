@@ -13,13 +13,16 @@ app.use(
       saveUninitialized: true,
     })
    );
-app.use(
+   app.use(
     cors({
       credentials: true,
-      origin: "http://localhost:3000",
+      origin: (origin, callback) => {
+        // Allow all origins
+        callback(null, true);
+      },
     })
-   );
-app.use(cors())
+  );
+
 app.use(express.json());
 const port = process.env.PORT || 4000;   
 app.use(express.json());
