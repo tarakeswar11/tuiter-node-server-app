@@ -5,7 +5,7 @@ const createTuit = (req, res) => {const newTuit = req.body;
     newTuit._id = (new Date()).getTime()+'';
     newTuit.likes = 0;
     newTuit.liked = false;
-    newTuit.title = 'TTT';
+    newTuit.title = 'The National Aeronautics and Space Administration is an independent agency of the U.S. federal government responsible for the civil space program';
     tuits.push(newTuit);
     res.json(newTuit);
   }

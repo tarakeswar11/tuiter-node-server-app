@@ -20,10 +20,14 @@ app.use(
         // Allow all origins
         callback(null, true);
       },
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // Allow all CRUD operations
     })
   );
+  
+  
 
 app.use(express.json());
+app.options('*', cors());
 const port = process.env.PORT || 4000;   
 app.use(express.json());
 TuitsController(app);
