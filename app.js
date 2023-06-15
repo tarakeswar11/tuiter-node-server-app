@@ -13,7 +13,7 @@ app.use(
       saveUninitialized: true,
     })
    );
-   app.use(
+app.use(
     cors({
       credentials: true,
       origin: (origin, callback) => {
