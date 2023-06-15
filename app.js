@@ -6,7 +6,7 @@ import UserController from './controllers/users/users-controller.js';
 import TuitsController from "./controllers/tuits/tuits-controller.js";
 import AuthController from './controllers/users/auth-controller.js';
 import mongoose from "mongoose";
-mongoose.connect("mongodb+srv://giuseppi:supersecretpassword@cluster0.u1keu8a.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect("mongodb://127.0.0.1:27017/tuiter");
 const app = express();
 app.use(
     session({
